@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    color: rgb(53, 117, 214);
+}
+
+.content {
+    background-color: rgb(246, 246, 202);
+    border-left: 5px solid rgba(190, 190, 10, 0.77);
+    text-indent: 10px;
+}
+
+p {
+    font-weight: bold;
+}
