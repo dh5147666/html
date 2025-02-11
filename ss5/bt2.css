@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    background-color: black;
+}
+
+p {
+    font-size: 30px;
+    font-family: Arial;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: green;
+}
