@@ -1,4 +1,3 @@
-/* Định dạng chung */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,7 +5,7 @@ body {
     text-align: center;
 }
 
-/* Header */
+
 header {
     background-color: #212529;
     padding: 20px 0;
@@ -41,7 +40,7 @@ nav ul li a {
     font-size: 16px;
 }
 
-/* Phần giới thiệu */
+
 .about {
     background-color: #e9ecef;
     padding: 40px 0;
@@ -59,7 +58,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Dự án */
+
 .projects {
     padding: 40px 0;
 }
@@ -84,7 +83,7 @@ nav ul li a {
     font-size: 16px;
 }
 
-/* Footer */
+
 footer {
     background-color: #e9ecef;
     padding: 15px;
@@ -102,5 +101,5 @@ h1 {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
-    /* Canh trái */
+
 }
