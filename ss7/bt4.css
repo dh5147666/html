@@ -1,0 +1,15 @@
+.ghide {
+    position: absolute;
+    top: 120px;
+    left: 10px;
+    color: rgb(249, 245, 245);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.zoom-img {
+    width: 1000px;
+    /* Đặt chiều rộng */
+    height: auto;
+    /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
+}
