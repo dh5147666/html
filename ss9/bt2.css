@@ -1,9 +1,19 @@
 .container {
-    background-color: aliceblue;
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid gray;
+    background: #f8f8f8;
 }
 
 .item {
-    background-color: green;
+    background: #28a745;
+    color: white;
     text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
 }
