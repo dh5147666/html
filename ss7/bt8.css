@@ -1,0 +1,77 @@
+ body {
+     font-family: Arial, sans-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     background-color: #f5f5f5;
+ }
+
+ .card {
+     background: white;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     width: 300px;
+ }
+
+ .status {
+     display: inline-block;
+     background: #ffcc99;
+     color: #c05805;
+     padding: 5px 10px;
+     border-radius: 5px;
+     font-size: 12px;
+     font-weight: bold;
+ }
+
+ .client,
+ .budget {
+     display: flex;
+     align-items: center;
+     margin: 10px 0;
+ }
+
+ .client a {
+     color: #007bff;
+     text-decoration: none;
+     font-weight: bold;
+ }
+
+ .progress-bar {
+     height: 8px;
+     background: #ffe5cc;
+     border-radius: 5px;
+     overflow: hidden;
+     margin: 10px 0;
+ }
+
+ .progress {
+     height: 100%;
+     width: 76%;
+     background: #ff8c1a;
+ }
+
+ .dates {
+     font-size: 14px;
+     color: #666;
+ }
+
+ .footer {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 10px;
+ }
+
+ .avatars img {
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     margin-right: -10px;
+     border: 2px solid white;
+ }
+
+ .tasks {
+     font-weight: bold;
+ }
