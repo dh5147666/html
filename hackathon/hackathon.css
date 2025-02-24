@@ -117,7 +117,7 @@ h3 {
 }
 
 .year {
-    background: #007bff;
+    background: #017df9;
     color: white;
     padding: 3px 8px;
     border-radius: 5px;
@@ -141,4 +141,62 @@ footer {
     padding: 20px;
     background: #eaeaea;
     margin-top: 30px;
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    color: #333;
+}
+
+.recent-posts {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.meta {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.view-all {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.view-all a {
+    text-decoration: none;
+    color: #007bff;
 }
