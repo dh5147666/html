@@ -14,4 +14,4 @@ if (!Number.isInteger(a) || !Number.isInteger(b) || a != 0) {
         product *= a;
     }
     console.log(product);
-}
+}  
