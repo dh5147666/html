@@ -5,4 +5,4 @@ for (let index = 0; index < valuesArray.length; index++) {
         correct.push(valuesArray[index]);
     }
 }
-console.log(truthyValues);
+console.log(truthyValues); 
