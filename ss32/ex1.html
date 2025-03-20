@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi màu nền</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            background-color: lightgray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">
+            <button onclick="changeColor('box1')">Đổi màu nền</button>
+        </div>
+        <div class="box" id="box2">
+            <button onclick="changeColor('box2')">Đổi màu nền</button>
+        </div>
+    </div>
+
+    <script>
+        function changeColor(boxId) {
+            let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            document.getElementById(boxId).style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+
+</html>

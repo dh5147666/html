@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi kích thước chữ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #text {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            color: white;
+        }
+
+        .increase {
+            background-color: green;
+        }
+
+        .decrease {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 id="text">Chữ sẽ thay đổi kích thước khi bấm nút</h2>
+    <button class="btn increase" onclick="changeFontSize(2)">+</button>
+    <button class="btn decrease" onclick="changeFontSize(-2)">-</button>
+
+    <script>
+        let currentSize = 24;
+
+        function changeFontSize(change) {
+            let minSize = 12;
+            let maxSize = 50;
+
+            currentSize += change;
+
+            if (currentSize < minSize) currentSize = minSize;
+            if (currentSize > maxSize) currentSize = maxSize;
+
+            document.getElementById("text").style.fontSize = currentSize + "px";
+        }
+    </script>
+
+</body>
+
+</html>
