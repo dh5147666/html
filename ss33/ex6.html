@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng Thời tiết</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+        }
+
+        .weather-card {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #e6f7ff;
+        }
+
+        .weather-card img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ứng dụng Thời tiết</h1>
+        <input type="text" id="cityInput" placeholder="Nhập tên thành phố">
+        <button onclick="getWeather()">Tìm kiếm</button>
+        <div id="weatherResult" class="weather-card" style="display:none;">
+            <h2 id="cityName"></h2>
+            <div id="weatherDetails">
+                <img id="weatherIcon" alt="icon">
+                <p id="temperature"></p>
+                <p id="humidity"></p>
+                <p id="windSpeed"></p>
+            </div>
+        </div>
+        <div id="errorMessage" style="display:none; color:red;"></div>
+    </div>
+    <script>
+        const weatherData = {
+            "Hồ Chí Minh": { temperature: "32°C", humidity: "75%", windSpeed: "7 km/h", description: "Nắng", icon: "" },
+            "Hà Nội": { temperature: "25°C", humidity: "70%", windSpeed: "5 km/h", description: "Có mây", icon: "" },
+            "Đà Nẵng": { temperature: "28°C", humidity: "82%", windSpeed: "12 km/h", description: "Mưa rào", icon: "" }
+        };
+
+        function getWeather() {
+            const cityInput = document.getElementById("cityInput").value;
+            const weatherResult = document.getElementById("weatherResult");
+            const errorMessage = document.getElementById("errorMessage");
+
+            if (weatherData[cityInput]) {
+                const weather = weatherData[cityInput];
+                document.getElementById("cityName").innerText = cityInput;
+                document.getElementById("temperature").innerText = `Nắng: ${weather.temperature}`;
+                document.getElementById("humidity").innerText = `Độ ẩm: ${weather.humidity}`;
+                document.getElementById("windSpeed").innerText = `Tốc độ gió: ${weather.windSpeed}`;
+                document.getElementById("weatherIcon").src = weather.icon;
+
+                weatherResult.style.display = "block";
+                errorMessage.style.display = "none";
+            } else {
+                errorMessage.innerText = "Thành phố không tồn tại.";
+                errorMessage.style.display = "block";
+                weatherResult.style.display = "none";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

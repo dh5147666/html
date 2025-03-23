@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select onclick="choice()" name="" id="dish">
+        <option value="showall">Lua chon danh muc</option>
+        <option value="Do an">Do an</option>
+        <option value="Nuoc">Nuoc</option>
+        <option value="Dung cu">Dung cu</option>
+    </select>
+    <button class="btn">loc</button>
+    <ul id="list">
+
+    </ul>
+    <script>
+        let dish = [
+            { name: `rau sach`, catecory: `Do an` },
+            { name: `thit lon`, catecory: `Do an` },
+            { name: `Pepsi khong calo`, catecory: `Nuoc` },
+            { name: `Cocacola`, catecory: `Nuoc` },
+            { name: `Co le`, catecory: `Dung cu` },
+            { name: `Tua vit`, catecory: `Dung cu` },
+        ];
+        function render(items) {
+            let str = "";
+            for (let i = 0; i < items.length; i++) {
+                str += `<li> ${items[i].name} </li>`
+            }
+            document.getElementById("list").innerHTML = str;
+        }
+        render(dish)
+        function choice() {
+            let show = document.getElementById("dish").value;
+            let result = dish.filter(item => item.catecory == show)
+            if (result.length == 0) {
+                render(dish);
+            } else {
+                render(result);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
