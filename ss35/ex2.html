@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .addBook {
+            /* text-align: center; */
+            padding-left: 30px;
+        }
+
+        button {
+            background-color: rgb(41, 2, 78);
+            color: white;
+
+        }
+
+        .form {
+            border: 1px solid black;
+            width: 200px;
+            height: 170px;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: 2px;
+            top: 2px;
+        }
+    </style>
+
+    <div class="addBook">
+        <button onclick="closed()"> ADD BOOK </button>
+    </div>
+    <div style="display: none;" class="form">
+        <h3>Add BookMark</h3>
+        <span onclick="closen()" class="close"> X</span>
+        <label type="text"> Website Name</label><br>
+        <input type="text"><br>
+        <label type="text"> Website URL</label><br>
+        <input type="link"><br>
+        <button onclick="addBookMark()"> Save </button>
+    </div>
+    <script>
+        let bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+
+        function closed() {
+            document.getElementsByClassName("form")[0].style.display = "block";
+        }
+        function closen() {
+            document.getElementsByClassName("form")[0].style.display = "none";
+        }
+        // function thêm dấu trang
+        function addBookMark() {
+            let name;
+            let url;
+            // khởi tạo đối tượng
+            let bookmark = {
+                name: name,
+                url: url
+            }
+            bookmarks.push(bookmark);
+            // lưu lại trên local
+            localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+            // gọi hàm hiển thị
+        }
+        // tạo hàm hiển thị danh sách dấu trang
+
+    </script>
+</body>
+
+</html>

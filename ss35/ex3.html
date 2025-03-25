@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Products</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Product Search</h1>
+    <input type="text" id="searchInput" placeholder="Search for products...">
+    <button onclick="searchProducts()">Search</button>
+    <div class="container" id="productContainer"></div>
+
+    <script>
+        let products = [
+            { id: 1, name: "iPhone 12", price: 300000, description: "Mô tả sản phẩm iPhone 12" },
+            { id: 2, name: "iPhone 13", price: 400000, description: "Mô tả sản phẩm iPhone 13" },
+            { id: 3, name: "iPhone 16", price: 600000, description: "Mô tả sản phẩm iPhone 16" }
+        ];
+
+        function renderProducts(productList) {
+            const container = document.getElementById("productContainer");
+            container.innerHTML = ""; // Xóa nội dung cũ
+            productList.forEach(product => {
+                container.innerHTML += `
+                    <div class="product">
+                        <h3>${product.name}</h3>
+                        <p>Price: ${product.price} VND</p>
+                        <p>${product.description}</p>
+                    </div>
+                `;
+            });
+        }
+
+        function searchProducts() {
+            const searchInput = document.getElementById("searchInput").value.toLowerCase();
+            const filteredProducts = products.filter(product =>
+                product.name.toLowerCase().includes(searchInput)
+            );
+            renderProducts(filteredProducts);
+        }
+
+        // Hiển thị tất cả sản phẩm ban đầu
+        renderProducts(products);
+    </script>
+</body>
+
+</html>
