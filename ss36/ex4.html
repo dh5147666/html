@@ -197,7 +197,20 @@
         </div>
     </div>
     <script>
-        <script>
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        const modeIcon = document.querySelector('#mode-icon');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                modeIcon.src = 'https://img.icons8.com/ios-filled/50/sun.png';
+            } else {
+                modeIcon.src = 'https://img.icons8.com/ios-filled/50/sun.png';
+            }
+        });
+
+
 
 
     </script>
