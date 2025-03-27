@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .blue {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .yellow {
+            background-color: yellow;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .purple {
+            background-color: rgb(235, 17, 235);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Chọn màu nền bạn yêu thích</h1>
+    <button class="red">Đỏ </button>
+    <button class=" blue"> Xanh</button>
+    <button class="yellow"> vàng </button>
+    <button class="purple">Tím</button>
+    <script>
+        document.querySelector('.red').addEventListener('click', () => {
+            document.body.style.backgroundColor = 'red';
+        });
+
+        document.querySelector('.blue').addEventListener('click', () => {
+            document.body.style.backgroundColor = 'blue';
+        });
+
+        document.querySelector('.yellow').addEventListener('click', () => {
+            document.body.style.backgroundColor = 'yellow';
+        });
+
+        document.querySelector('.purple').addEventListener('click', () => {
+            document.body.style.backgroundColor = 'rgb(235, 17, 235)';
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
