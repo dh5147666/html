@@ -119,6 +119,41 @@
             </div>
         </div>
     </div>
+    <script>
+        const taskName = document.getElementById('taskName');
+        const pendingTasks = document.getElementById('pendingTasks');
+        const inProgressTasks = document.getElementById('inProgressTasks');
+        const doneTasks = document.getElementById('doneTasks');
+
+        document.querySelector('button').addEventListener('click', () => {
+            const taskContent = taskName.value;
+            if (taskContent.trim() === '') {
+                alert('Vui lòng nhập tên công việc!');
+                return;
+            }
+
+            const task = document.createElement('div');
+            task.classList.add('task');
+            task.innerHTML = `
+        <p>${taskContent}</p>
+        <button>Chuyển tiếp</button>
+      `;
+
+            pendingTasks.appendChild(task);
+            taskName.value = '';
+
+            task.querySelector('button').addEventListener('click', () => {
+                inProgressTasks.appendChild(task);
+                task.querySelector('button').remove();
+                task.innerHTML += `<button>Hoàn thành</button>`;
+
+                task.querySelector('button').addEventListener('click', () => {
+                    doneTasks.appendChild(task);
+                    task.querySelector('button').remove();
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
